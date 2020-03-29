@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include "Stars.h"
+#include "../lib/Stars.h"
 
 
 int main(int argc, char **argv)
