@@ -19,7 +19,8 @@ int main(int argc, char **argv)
     std::cout << "Please, Enter Maximum number of Stars: ";
     std::getline(std::cin, temp);
     count = std::stoi(temp);
-    print_in_V(count);
-    
+    std::cout << "\n" << std::endl;
+    print_in_square(count);
+    std::cout << "\n" << std::endl;
     return 0;
 }

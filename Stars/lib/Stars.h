@@ -12,9 +12,14 @@
          void print_in_column(int);
          void print_in_diagnonal(int);
          void print_in_V(int);
+         void print_in_square(int);
+         void print_in_parallel(int);
          
-         /***** Handler Functions *****/
-         void check_odd_even(int);
+         /***** Helper Functions *****/
+         char check_odd_even(int);
+         void lateral_offset_generator(int);
+         void vertical_offset_generator(int);
+         
 #ifdef __cplusplus
      }
 #endif
