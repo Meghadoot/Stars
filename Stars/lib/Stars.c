@@ -36,16 +36,29 @@ void print_in_diagnonal(int number)
 
 void print_in_V(int number)
 {
+    int temp = 0;
+    /*
+    if(number > 9)
+    {
+        temp = number - 9;
+        
+    }
+    */
+     //TODO: Need to check odd-even number/input 
+    temp = (number * 2) - 2;
 	printf("\n");
+    
 	for(int i=0; i<number; i++)
 	{
 		printf("*");
 		// Print spaces
 		// Print star
-		for(int j=i; j<=number-i+(number/2); j++)
+		//for(int j=i; j<=number-i+(number/2)+2+temp; j++)//old
+        for(int j=i; j<temp; j++)    
 		{
 			printf(" ");
 		}
+		temp--;//new
 		printf("*");
 		// Go to next line
 		// Print spaces
