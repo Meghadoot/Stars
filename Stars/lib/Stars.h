@@ -12,6 +12,9 @@
          void print_in_column(int);
          void print_in_diagnonal(int);
          void print_in_V(int);
+         
+         /***** Handler Functions *****/
+         void check_odd_even(int);
 #ifdef __cplusplus
      }
 #endif
