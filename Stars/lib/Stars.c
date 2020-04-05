@@ -60,15 +60,37 @@ void print_in_V(int number)
 	}
 }
 
-void print_in_triangle(int number)
+void print_in_inverted_V(int number)
 {
 	lateral_offset_generator(number);
 	printf("**\n");
-	for(int i = 1; i<=number; i++)
+	for(int i = 1; i<number; i++)
 	{
 		lateral_offset_generator(number - i);
 		printf("*");
 		lateral_offset_generator(i*2);
+		printf("*\n");
+	}
+
+}
+
+void print_in_triangle(int number)
+{
+	lateral_offset_generator(number);
+	printf("**\n");
+	for(int i = 1; i<number; i++)
+	{
+		lateral_offset_generator(number - i);
+		printf("*");
+		if(i == (number-1))
+		{
+			// Eliminate two stars as printed by default ("out of loop")
+			print_in_row(number*2 - 2);
+		}
+		else
+		{
+			lateral_offset_generator(i*2);
+		}
 		printf("*\n");
 	}
 
@@ -134,7 +156,6 @@ void lateral_offset_generator(int number)
     {
         printf(" ");
     }
-
 }
 
 void vertical_offset_generator(int number)
@@ -144,6 +165,4 @@ void vertical_offset_generator(int number)
 		printf(" ");
 		printf("\n");
 	}
-
-
 }

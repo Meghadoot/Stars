@@ -12,6 +12,7 @@
          void print_in_column(int);
          void print_in_diagnonal(int);
          void print_in_V(int);
+         void print_in_inverted_V(int);
          void print_in_square(int);
          void print_in_parallel(int);
          void print_in_triangle(int);
