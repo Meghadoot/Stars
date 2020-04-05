@@ -37,35 +37,26 @@ void print_in_diagnonal(int number)
 
 void print_in_V(int number)
 {
-    int temp = 0;
-
+    int space_margin = 0;
     //TODO: Check the need of odd-even number/input
     //char c = check_odd_even(number);
     //printf("Number is: %d",c);
-
-    temp = (number * 2) - 2;
-	//printf("\n");
+    space_margin = (number * 2) - 2;
+		//printf("\n");
 
 	for(int i=0; i<number; i++)
 	{
 		printf("*");
 		// Print spaces
-		// Print star
-        for(int j=i; j<temp; j++)
-		{
-			printf(" ");
-		}
+		lateral_offset_generator(space_margin - i);
 		//Reduce maximum range by 1
-		temp--;
-
+		space_margin--;
+		// Print star
 		printf("*");
 		// Go to next line
 		// Print spaces
 		printf("\n");
-		for(int k=0; k<=i; k++)
-		{
-			printf(" ");
-		}
+		lateral_offset_generator(i+1);
 	}
 }
 

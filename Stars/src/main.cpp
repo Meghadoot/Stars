@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     std::getline(std::cin, temp);
     count = std::stoi(temp);
     std::cout << "\n" << std::endl;
-    print_in_triangle(count);
+    print_in_V(count);
     //print_in_square(count);
     // Operate statemanager for view
     // Operate statemanager for controller
