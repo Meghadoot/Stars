@@ -13,7 +13,7 @@ void print_in_row(int number)
 void print_in_column(int number)
 {
 	//printf("\n");
-	
+
 	for(int i=0; i<number; i++)
 	{
 		printf("*\n");
@@ -69,7 +69,33 @@ void print_in_V(int number)
 	}
 }
 
+void print_in_triangle(int number)
+{
+	lateral_offset_generator(number);
+	printf("**\n");
+	for(int i = 1; i<=number; i++)
+	{
+		lateral_offset_generator(number - i);
+		printf("*");
+		lateral_offset_generator(i*2);
+		printf("*\n");
+	}
 
+}
+
+void print_in_right_triangle(int number)
+{
+	lateral_offset_generator(number+1);
+	printf("*\n");
+	for(int i = 0; i<number; i++)
+	{
+		lateral_offset_generator(number - i);
+		printf("*");
+		lateral_offset_generator(i);
+		printf("*\n");
+	}
+
+}
 
 void print_in_parallel(int number)
 {
@@ -98,8 +124,6 @@ void print_in_square(int number)
     print_in_parallel(number);
     printf(" ");
     print_in_row(number);
-
-
 }
 
 

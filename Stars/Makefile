@@ -5,13 +5,13 @@
 #***********************************************************************
 
 # @@@ How to use:
-# make       -> compile the IOC stubs and generate build 
+# make       -> compile the IOC stubs and generate build
 # make clean -> remove the library file and all object files (.o)
 # make all   -> clean and compile
 #***********************************************************************
 
 # @@@ How to adapt:
-# 
+#
 # No changes-New source files can be added directly in src and/or gen folder
 # Update SRC_DIR, iff new folders are created in project
 # Compilation and linking options can be changed accordingly
@@ -46,7 +46,7 @@ vpath %.cpp $(SRC_DIR)
 define make-goal
 $1/%.o: %.c
 	$(CC) $(INCLUDES) -c $$< -o $$@
-	
+
 $1/%.o: %.cpp
 	$(CC) $(INCLUDES) -c $$< -o $$@
 endef
